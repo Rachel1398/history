@@ -9,93 +9,120 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Terror.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Terror" startnode="1" creator="Twine" creator-version="2.3.13" ifid="2C544355-B25B-4273-8453-13AB91E445B2" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="499,101.5" size="100,100">The year is 1934. You need to survive the Terror. 
+<tw-storydata name="The Terror" startnode="1" creator="Twine" creator-version="2.3.13" ifid="2C544355-B25B-4273-8453-13AB91E445B2" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="500,158.5" size="100,100">The year is 1934. You need to survive the Terror. 
 Choose one character to start the game:
 
 =|=
-[[A Worker -&gt;Peasant Boy Arc 1]]
-[[&lt;img src=&quot;https://s3.amazonaws.com/icptmsdata/s/t/e/t/stettner_louis_2009_93_73_441930_displaysize.jpg&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;worker&quot;&gt;-&gt;Peasant Boy Arc 1]]
+[[Peasent Boy -&gt;Peasant Boy Arc 1]]
+&lt;img src=&quot;https://www.histclo.com/imagef/date/2012/08/havdey01s.jpg&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;peasent boy&quot;&gt;
 =|=
 [[A Doctor -&gt;DoctorArc 1]]
-[[&lt;img src=&quot;https://cdna.artstation.com/p/assets/images/images/011/147/444/large/ku-caihua-2.jpg?1528116351&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;Scientist&quot;&gt;-&gt;DoctorArc 1]]
+&lt;img src=&quot;https://cdna.artstation.com/p/assets/images/images/011/147/444/large/ku-caihua-2.jpg?1528116351&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;Scientist&quot;&gt;
 =|=
 [[A Red Army officer-&gt;Red army 1]]
-[[&lt;img src=&quot;https://www.clipartkey.com/mpngs/m/221-2214722_soviet-soldier-transparent-background.png&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;red army&quot;&gt;-&gt;Red army 1]]</tw-passagedata><tw-passagedata pid="2" name="DoctorArc 1" tags="" position="710,274.5" size="100,100">You are a doctor that worked in Moscow.
+&lt;img src=&quot;https://www.clipartkey.com/mpngs/m/221-2214722_soviet-soldier-transparent-background.png&quot; width=&quot;150&quot; height=&quot;200&quot; alt=&quot;red army&quot;&gt;</tw-passagedata><tw-passagedata pid="2" name="DoctorArc 1" tags="" position="710,274.5" size="100,100">You are a doctor that worked in Moscow.
 
 Forming the intellectual class of society, you are wary about the state of affaris in the politcs of the country. 
 
 Yet you did your job for the Soviet Union and saved the lives of many.
 
 
-[[Continue.-&gt;Introduction to Kirov]]
+[[Continue.-&gt;Introduction to Kirov]]</tw-passagedata><tw-passagedata pid="3" name="Peasant Boy Arc 1" tags="" position="821,171.5" size="100,100">You wake up feeling the sharp winter air in your lungs. 
 
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="3" name="Peasant Boy Arc 1" tags="" position="801,112.5" size="100,100">You wake up feeling the sharp winter air in your lungs. 
+You mother, who was about to leave for the factories, hollered at you: &quot;Get out of bed and go to school!&quot; 
 
-&lt;img src=&quot;http://www.compressor-pump.com/wp-content/uploads/2017/01/Dirt-Road-with-Trees-in-the-Snow.jpg&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;Winter&quot;&gt;
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;) [[&quot;Wait what school?&quot;-&gt;Young Pioneers]]
 
-Your friend, who was about to leave the barracks, hollered at you: &quot;Get out of bed and get to work!&quot; 
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;) [[&quot;Yes, I have to head to school.&quot;-&gt;Compulsory Schooling]] 
+(text-colour:black)[tw-sidebar {display: none}]</tw-passagedata><tw-passagedata pid="4" name="Young Pioneers" tags="" position="1087,39" size="100,100">You decided you were not going to school last week. 
 
-You get off the bed and went prepared for work. 
+You were selected for the Yong Pioneers programme. 
+[[Next-&gt;Young pioneers II ]]</tw-passagedata><tw-passagedata pid="5" name="Compulsory Schooling" tags="" position="1019,166.5" size="100,100">The Communist prized education above everything else. This meant that you had to go to school. 
 
-[[Continue. -&gt;Secret police 1]]
+Thanks to school, you can read and write. You were better off than your parents who only knew how to farm. 
 
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="4" name="Secret police 1" tags="" position="1029,134.5" size="100,100">There was news about people who were going around interrogating others, and arresting them without any evidence, all because they suspect that you are a traitor.  
+How many years of complusory schooling did you have to go through? 
+(set: $answer to (prompt: &quot;How many years of complusory schooling did you have to go through?&quot;,&quot;Answer&quot;))
+Your answer is (print: $answer)
+(set: $correct to &quot;9&quot;)
+(if: $answer is $correct)[
+	(go-to: &quot;deciding to stay in school&quot;)
+]
+(else:)[
+	(go-to:&quot;Incorrect answer restart&quot;)
+]</tw-passagedata><tw-passagedata pid="6" name="Starvation" tags="" position="1821,119.5" size="100,100"> Not turning back, you made a run and managed to escape the soilders. 
 
-What is the name of this group of people who arrest others?
-[[Continue.-&gt;Secret Police]]
+However you were on your own. 
 
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="5" name="Working on the machinery" tags="" position="1293,142.5" size="100,100">You were a worker in Mangnitogorsk. 
+You went around asking for food, but no one bats an eye towards you. To them you were one of the many other disowned children of the Soviet Union.  You did not turn yourself in, or return back home. 
 
-&lt;img src=&quot;https://i.guim.co.uk/img/media/a6e01e17e311152a73aaf2bd8e706aac58a38237/0_71_1024_629/master/1024.jpg?width=700&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=17069c8a0587befc5f6d24c2faeebb3c&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;game over&quot;&gt;
+You didnt last long alone in the winter and starved to death. 
 
- 
-They fed you better here than in the farms. You had potatos, not the soggy sour cabbages back at home. 
+END. </tw-passagedata><tw-passagedata pid="7" name="Out to the farms" tags="" position="1472,0" size="100,100">You went to work in the farms. 
+Before you know it, months have passed. 
 
-[[Continue.-&gt;Friend dies in work]]
+You farms did not manage to yield much and food was getting scarce.
 
-</tw-passagedata><tw-passagedata pid="6" name="Incorrect answer restart " tags="" position="939,0" size="100,100">Your answer was not correct. You have to restart the journey again. (Recap on the lecture notes!) 
-[[Continue. -&gt;Peasant Boy Arc 1]]</tw-passagedata><tw-passagedata pid="7" name="Malnutrition" tags="" position="1826,27" size="100,100">
+What will you do? 
+
+Steal your friend&#39;s potato. 
+[[Endure it-&gt;Malnutrition]]
+</tw-passagedata><tw-passagedata pid="8" name="Working on the machinery" tags="" position="1358,211.5" size="100,100">You have decided to learn more about the machinery.
+
+After learning more about how to make use of tools for months, they decided that you were old and able enough to work in the factories. 
+
+They fed you better in the factories. You had potatos, not the soggy sour cabbages back in school. 
+
+However, work was very dangerous. You friend fell from a height and died the last day, yet your superior did not bat an eye towards the death. 
+
+As months flew by, you were task with even more work, and even harsher conditions.
+
+[[&quot;This is not fair, we need better treatment&quot; -&gt;Defiance]]
+
+[[&quot;Let&#39;s just endure this and live through it...&quot; -&gt;Continuing the hardship]]
+
+</tw-passagedata><tw-passagedata pid="9" name="Escape!" tags="" position="1622,0" size="100,100">You made an elaborate plan to escape from the train that was going to send you to a farm. You did not believe that life will be better there. 
+
+Alas, when you tried to execute your plan, you were seen by a few red army soilders who yelled for you to stop. 
+
+[[&quot;Stop now, I can still explain myself&quot; -&gt;A enemy of the Soviet Union ]]
+
+[[&quot;Do not turn back, I would be labelled as a defactor and sent to the gulags!&quot; -&gt;Starvation]]</tw-passagedata><tw-passagedata pid="10" name="deciding to stay in school" tags="" position="1131,167.5" size="100,100">However, everyday you read text praising the communists, sang songs that praised the revolution. It was boring...
+
+There was hardly anything interesting, execpt for learning technical subjects that taught you how to fix machines perhaps. 
+
+[[&quot;I love learning about machines! Let&#39;s stay in school.&quot;-&gt;Working on the machinery]]
+
+[[&quot;I hate learning about machines! I want to get out of this place.&quot; -&gt;Young Pioneers]]</tw-passagedata><tw-passagedata pid="11" name="Incorrect answer restart " tags="" position="834,5" size="100,100">Your answer was not correct. You have to restart the journey again. </tw-passagedata><tw-passagedata pid="12" name="Young pioneers II " tags="" position="1357,63.5" size="100,100">Where would the Young Pionners programme send you to? 
+(set: $answer to (prompt: &quot;Where would the Young Pionners programme send you to?(one word, singular)&quot;,&quot;Answer&quot;))
+Your answer is (print: $answer)
+(if: $answer is &quot;farm&quot;)[
+	(go-to: &quot;Out to the farms&quot;)
+]
+(if: $answer is &quot;industries&quot;)[
+	(go-to: &quot;YP sent to the factories&quot;)
+(else:)[
+	(go-to:&quot;Incorrect answer restart I&quot;)
+]</tw-passagedata><tw-passagedata pid="13" name="Malnutrition" tags="" position="1860,0" size="100,100">
 One day, you fell really sick due to malnutrition. There was hardly any more food your superior could spare, as that would mean less for others. 
 
 With whatever energy you have left, you wrote a last letter to your mother, not knowing if it would even reach her. 
 
-END.
+END.</tw-passagedata><tw-passagedata pid="14" name="Incorrect answer restart I" tags="" position="942,5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="A enemy of the Soviet Union " tags="" position="1721,233.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Defiance" tags="" position="1398,358.5" size="100,100">After looking at your fellow comrades suffer so much with you, you decided that enough is enough. 
 
-&lt;img src=&quot;https://media4.giphy.com/media/dkuZHIQsslFfy/200.webp?cid=ecf05e47pymvhlzkmbqj7c4walitwg4d5ql2wzv53n9p6ibs&amp;rid=200.webp&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;game over&quot;&gt;
+Rallying support from other like-minded workers, you wanted to push for better wages and standards. You and your friends started to voice out your discontent towards the system and had secret meetings after a hard days of work. 
 
-[[Restart? -&gt;Untitled Passage]]</tw-passagedata><tw-passagedata pid="8" name="Defiance" tags="" position="1477,129.5" size="100,100">After looking at your fellow comrades suffer so much with you, you decided that enough is enough. 
+One night, there was a knock on your door. 
 
-Rallying support from other like-minded workers, you wanted to push for better wages and standards. You and your friends started to voice out your discontent towards the system and had secret meetings after hard days of work. 
-
-&lt;img src=&quot;https://breakingthecode.ca/wp-content/uploads/2015/07/board-secret-meeting.jpg&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;secret meeting&quot;&gt;
-
-
-However you were anxious. 
-
-Why was it dangerous to organize such events and what will happen to you? 
-
-[[Continue.-&gt;To escape or not escape. ]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="9" name="Continuing the hardship" tags="" position="1542,23.5" size="100,100">You continued to work hard for the state, believing that one day it would be successful. 
-
-&lt;img src=&quot;https://media.gettyimages.com/photos/stalingrad-soviet-union-workers-repair-equipment-at-a-home-front-of-picture-id522610124&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;workers working&quot;&gt;
-
- 
+[[&quot;Open it&quot;. -&gt;betrayal?]]
+[[&quot;Do not open it&quot;.-&gt;Questioning]]</tw-passagedata><tw-passagedata pid="17" name="Continuing the hardship" tags="" position="1580,217.5" size="100,100">You continued to work hard for the state, believing that one day it would be successful. 
 Alas, your days were numbered. 
 
-[[Continue-&gt;Malnutrition]]
+Continue[[Continue-&gt;Malnutrition]]</tw-passagedata><tw-passagedata pid="18" name="YP sent to the factories" tags="" position="1477,110.5" size="100,100">Under the Young Pioneers programme, you were sent to the factories. 
 
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="10" name="betrayal?" tags="" position="1804,297.5" size="100,100">You opened the door. 
+You learnt more about the machinery for months, and soon you were deemed worthy enough to join the ranks of the workers. 
+
+Join the workforce.[[Join the workforce.-&gt;Working on the machinery]]</tw-passagedata><tw-passagedata pid="19" name="betrayal?" tags="" position="1729,375.5" size="100,100">You opened the door. 
 
 It was the Secret Police! 
 
@@ -104,20 +131,12 @@ The police explained that they received news about people voicing out their grev
 They wanted you to name some names. 
 
 [[Save yourself from suspicion and tell on your friends. -&gt;Saving yourself]]
-[[Stay loyal and tell them you do not know anything. -&gt;Betrayal II]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="11" name="Questioning" tags="" position="1786,150.5" size="100,100">You choose to remain quiet. You were scared. 
+[[Stay loyal and tell them you do not know anything. -&gt;Betrayal II]]</tw-passagedata><tw-passagedata pid="20" name="Questioning" tags="" position="1587,396.5" size="100,100">You choose to remain quiet. You were scared. 
 Have the Secret Police found out about the meetings? 
 
 There was a moment of silence after the rapid knocking, followed by some muffled talking. 
 
-[[Suddenly... -&gt;Betrayal ]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="12" name="Betrayal " tags="" position="1956,419.5" size="100,100">The door slammed open.
+[[Suddenly... -&gt;Betrayal ]]</tw-passagedata><tw-passagedata pid="21" name="Betrayal " tags="" position="1759,488.5" size="100,100">The door slammed open.
 
 They were here! The Secret Police! 
 
@@ -125,36 +144,17 @@ Behind them, you spot a familiar face. A close friend of yours who you confided 
 
 You realized that it was a betrayal. 
 
-You were branded as an enemy and ordered to be sent for execution.
+You were branded as an enemy to Stalin and ordered to be sent to the gulags. 
 
-END.
-
-&lt;img src=&quot;https://media4.giphy.com/media/dkuZHIQsslFfy/200.webp?cid=ecf05e47pymvhlzkmbqj7c4walitwg4d5ql2wzv53n9p6ibs&amp;rid=200.webp&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;game over&quot;&gt;
-
-
-
-[[Restart? -&gt;Untitled Passage]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="13" name="Saving yourself" tags="" position="2030,142.5" size="100,100">You told on your friends and proved yourself innocent. 
+END.</tw-passagedata><tw-passagedata pid="22" name="Saving yourself" tags="" position="1941,198.5" size="100,100">You told on your friends and proved yourself innocent. 
 
 When your friends were arrested, you could not look them in the eye. 
 
 You survived as a capable worker in the factories and lived on to tell your tale about living during the Great Terror. 
 
 However you lived on with much regret. 
-&lt;img src=&quot;https://www.psychalive.org/wp-content/uploads/2011/10/Regret-Free.jpg&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;Regret&quot;&gt;
 
-
-CONGRATULATIONS. YOU HAVE SURVIVED THE GREAT TERROR. 
-
-[[Restart? -&gt;Untitled Passage]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="14" name="Betrayal II" tags="" position="2026,295.5" size="100,100">You choose to remain quiet about it. 
+CONGRATULATIONS. YOU HAVE SURVIVED THE PEASENT ARC. </tw-passagedata><tw-passagedata pid="23" name="Betrayal II" tags="" position="1908,439.5" size="100,100">You choose to remain quiet about it. 
 You would not tell on your friends! 
 
 However, days later, a friend you were working with was arrested. 
@@ -163,23 +163,11 @@ Under lengthy interrogations and inhumane tortures, he exposed you and your othe
 
 You were arrested, branded as an enemy and sent to the gulags.
 
-END. 
-
-&lt;img src=&quot;https://media4.giphy.com/media/dkuZHIQsslFfy/200.webp?cid=ecf05e47pymvhlzkmbqj7c4walitwg4d5ql2wzv53n9p6ibs&amp;rid=200.webp&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;game over&quot;&gt;
-
-[[Restart? -&gt;Untitled Passage]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="15" name="Introduction to Kirov" tags="" position="870,301.5" size="100,100">One day. You were reading the Pravda.
+END. </tw-passagedata><tw-passagedata pid="24" name="Introduction to Kirov" tags="" position="870,301.5" size="100,100">One day. You were reading the Pravda.
 
 The news which reported about an assasination of a significant individual on the night of&#39;&#39; 1 December 1934.&#39;&#39; This individual was the Secretary of the Leningrad Party Organization.
 
- [[Can you give the name of this leader? -&gt;KIROV]]
- 
- (text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="16" name="KIROV" tags="" position="1010,314.5" size="100,100">(set: $answer to (prompt: &quot;What was the full name of the Secretary who was killed?&quot;,&quot;Answer&quot;))
+ [[Can you give the name of this leader? -&gt;KIROV]]</tw-passagedata><tw-passagedata pid="25" name="KIROV" tags="" position="1010,314.5" size="100,100">(set: $answer to (prompt: &quot;What was the full name of the Secretary who was killed?&quot;,&quot;Answer&quot;))
 Your answer is (print: $answer)
 (set: $correct to &quot;Sergei Kirov&quot;)
 (if: $answer is $correct)[
@@ -187,22 +175,18 @@ Your answer is (print: $answer)
 ]
 (else:)[
 	(go-to:&quot;Incorrect answer restart Doc&quot;)
-]</tw-passagedata><tw-passagedata pid="17" name="Be careful of enemies of the state" tags="" position="1010,425.5" size="100,100">&quot;There are enemies of the state!&quot; your co-worker, exclaimed as you were reading the Pravda. &quot;We have to be careful about that, don&#39;t we?&quot;
+]</tw-passagedata><tw-passagedata pid="26" name="Be careful of enemies of the state" tags="" position="1010,425.5" size="100,100">&quot;There are enemies of the state!&quot; your co-worker, exclaimed as you were reading the Pravda. &quot;We have to be careful about that, don&#39;t we?&quot;
 
 [[&quot;Seems like it is real, you never know who would kill our great leader Stalin.&quot;-&gt;Agree with the Pravda]]
 
-[[&quot;Seems a little fishy, this assaination... I wonder how Kirov really died!&quot;-&gt;Disagree with the Pravda.]] </tw-passagedata><tw-passagedata pid="18" name="Incorrect answer restart Doc" tags="" position="857,422.5" size="100,100">Dang, you got that person&#39;s name wrong. Lets try that again. 
+[[&quot;Seems a little fishy, this assaination... I wonder how Kirov really died!&quot;-&gt;Disagree with the Pravda.]] </tw-passagedata><tw-passagedata pid="27" name="Incorrect answer restart Doc" tags="" position="857,422.5" size="100,100">Dang, you got that person&#39;s name wrong. Lets try that again. 
 (Psst... you can refer to your textbook!) 
 
-[[Retry. -&gt;DoctorArc 1]]</tw-passagedata><tw-passagedata pid="19" name="Agree with the Pravda" tags="" position="1138,354.5" size="100,100">Your co-worker nodded slowly at your comment and continued with his day in the hospital.
+[[Retry. -&gt;DoctorArc 1]]</tw-passagedata><tw-passagedata pid="28" name="Agree with the Pravda" tags="" position="1138,354.5" size="100,100">Your co-worker nodded slowly at your comment and continued with his day in the hospital.
 
 You had many cases to work with today, most of which were with high level communist members who have fallen ill, or injured themselves. You were afterall one of the best doctors, and many wanted to see you for their ailments.
 
-[[Continue.-&gt;Communist Party member patient]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="20" name="Disagree with the Pravda." tags="" position="1138,474.5" size="100,100">&quot;Seems a little fishy, this assaination... I wonder how Kirov really died!&quot; 
+[[Continue.-&gt;Communist Party member patient]]</tw-passagedata><tw-passagedata pid="29" name="Disagree with the Pravda." tags="" position="1138,474.5" size="100,100">&quot;Seems a little fishy, this assaination... I wonder how Kirov really died!&quot; 
 You said that out loud, absent-mindedly. 
 
 You co-worker lit up. &quot;I know, it is fishy.&quot; 
@@ -212,11 +196,7 @@ He said in a hushed tone.
 &quot;You know, I am getting a bit anxious about how things are being runned in our country, there seems to be not enough of everything around now...&quot; 
 
 [[Ask further about what your co-worker thinks. -&gt;Co-worker dissappeared]]
-[[Be careful. End this conversation now.-&gt;Worried doc]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="21" name="Communist Party member patient" tags="" position="1259,355.5" size="100,100">One day, there was a patient belonging to the communist party who came to see you for a minor infection. 
+[[Be careful. End this conversation now.-&gt;Worried doc]]</tw-passagedata><tw-passagedata pid="30" name="Communist Party member patient" tags="" position="1259,355.5" size="100,100">One day, there was a patient belonging to the communist party who came to see you for a minor infection. 
 
 You prescribed him the best medicine and treatment to your medical knowledge. However he did&#39;nt seem to be getting better.
 
@@ -226,11 +206,7 @@ A week later he came back, mildly annoyed.
 
 What shall you respond? 
 [[&quot;It should work. Give it time!&quot;-&gt;Medicine work? ]]
-[[&quot;Oh, let me find something stronger for you then..&quot;-&gt;Stronger medicine]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="22" name="Medicine work? " tags="" position="1440,513.5" size="100,100">&quot;It should work. Give it time!&quot; you said. 
+[[&quot;Oh, let me find something stronger for you then..&quot;-&gt;Stronger medicine]]</tw-passagedata><tw-passagedata pid="31" name="Medicine work? " tags="" position="1440,513.5" size="100,100">&quot;It should work. Give it time!&quot; you said. 
 
 The communist member looked ay you with doubt.
 
@@ -240,43 +216,24 @@ You sense something onimious going on with this particular patient.
 Should you be worried? 
 
 [[&quot;Yes, something can happen to me and my job!&quot;-&gt;Worried doc]]
-[[&quot;No, I am a professional, how dare he doubt me.&quot;-&gt;Purging of the doctors ]]
+[[&quot;No, I am a professional, how dare he doubt me.&quot;-&gt;Purging of the doctors ]]</tw-passagedata><tw-passagedata pid="32" name="Stronger medicine" tags="" position="1273,491.5" size="100,100">You gave a stronger medicine to the Communist Party member, and he seemed  happy about it. 
 
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="23" name="Stronger medicine" tags="" position="1273,491.5" size="100,100">You gave a stronger medicine to the Communist Party member, and he seemed  happy about it. 
-
-[[Continue-&gt;Purging of the doctors ]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="24" name="Worried doc" tags="" position="1381,644.5" size="100,100">It was not just the patients that were acting suspicious towards you. Other doctors were also unusually quiet and were not talking as much as last time. 
+[[Continue-&gt;Purging of the doctors ]]</tw-passagedata><tw-passagedata pid="33" name="Worried doc" tags="" position="1381,644.5" size="100,100">It was not just the patients that were acting suspicious towards you. Other doctors were also unusually quiet and were not talking as much as last time. 
 
 You left the office in worry, and did not like the atmosphere that was brewing. 
 
 When you reached home, things felt much better being with your family. 
 
-[[Continue. -&gt;knocking on the door.]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="25" name="Purging of the doctors " tags="" position="1604,530.5" size="100,100">The week in office, you and a number of your colleague-doctors were stopped at the entrance of the hospital. 
+[[Continue. -&gt;knocking on the door.]]</tw-passagedata><tw-passagedata pid="34" name="Purging of the doctors " tags="" position="1604,530.5" size="100,100">The week in office, you and a number of your colleague-doctors were stopped at the entrance of the hospital. 
 
 You were worried. These people did not look friendly. 
 
-They were looking for enemies of the state and interrogating everyone in the hospital about it. </tw-passagedata><tw-passagedata pid="26" name="knocking on the door." tags="" position="1588,754.5" size="100,100">In the dead of night, someone knocks on your door. 
+They were looking for enemies of the state and interrogating everyone in the hospital about it. </tw-passagedata><tw-passagedata pid="35" name="knocking on the door." tags="" position="1588,754.5" size="100,100">In the dead of night, someone knocks on your door. 
 
 You were afraid. Who would be looking for you at this ungodly hour? 
 
 [[Open the door.-&gt;interrogation]]
-[[Do not open the door. -&gt;kidnapped]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="27" name="interrogation" tags="" position="1766,625.5" size="100,100">You opened the door. It was the Secret Police. 
+[[Do not open the door. -&gt;kidnapped]]</tw-passagedata><tw-passagedata pid="36" name="interrogation" tags="" position="1766,625.5" size="100,100">You opened the door. It was the Secret Police. 
 
 &quot;Hello doctor.&quot; They said. &quot;We have a few questions to ask. Don&#39;t mind us intruding.&quot; 
 
@@ -286,11 +243,7 @@ You were afraid. Who would be looking for you at this ungodly hour?
 
 You were stunned by the question. What will you say? 
 [[&quot;I don&#39;t know anyone like that.&quot;-&gt;Deny]]
-[[&quot;I do know someone...&quot; -&gt;name names]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="28" name="kidnapped" tags="" position="1754,764.5" size="100,100">You did not open the door. 
+[[&quot;I do know someone...&quot; -&gt;name names]]</tw-passagedata><tw-passagedata pid="37" name="kidnapped" tags="" position="1754,764.5" size="100,100">You did not open the door. 
 Suddenly, there was a cackle, and a bang. 
 
 The door flew open. The secret police came in. 
@@ -300,22 +253,13 @@ Now they were rummaging through your documents, confiscating some items.
 
 &quot;Why? How?&quot; You exclaimed. You were petrified.
 &quot;I am innocent!&quot; 
-[[But it was too late... -&gt;Show trial]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="29" name="Deny" tags="" position="1930,664.5" size="100,100">&quot;I do not know anyone.&quot; You said strongly. 
+[[But it was too late... -&gt;Show trial]]</tw-passagedata><tw-passagedata pid="38" name="Deny" tags="" position="1930,664.5" size="100,100">&quot;I do not know anyone.&quot; You said strongly. 
 
 The secret police officer looked back at another officer, who gave a nod.
 
 &quot;You are under arrest.&quot; He said.
 
-Continue.[[Continue.-&gt;Show trial]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="30" name="name names" tags="" position="2025,546.5" size="100,100">&quot;I do know someone... &quot; you started, and named the co-worker who you were talking to in the office. 
+Continue.[[Continue.-&gt;Show trial]]</tw-passagedata><tw-passagedata pid="39" name="name names" tags="" position="2025,546.5" size="100,100">&quot;I do know someone... &quot; you started, and named the co-worker who you were talking to in the office. 
 &quot;He was saying that the Communist Party was wrong.. I think the communist party is great!&quot; 
 
 The officer thank you and left. 
@@ -326,43 +270,24 @@ However with one doctor less, you could not provide the same standard  services 
 
 You wonder how long will you last..
 
-CONGRATULATIONS, YOU SURVIVE. 
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="31" name="Show trial" tags="" position="1875,903.5" size="100,100">You were charged for treason, and for endangering the lives of the communist party members by prescribing medicines that weakened them. 
+CONGRATULATIONS, YOU SURVIVE. </tw-passagedata><tw-passagedata pid="40" name="Show trial" tags="" position="1912,788.5" size="100,100">You were charged for treason, and for endangering the lives of the communist party members by prescribing medicines that weakened them. 
 
 &quot;That is nonsense&quot; you say. You wanted to defend yourself.. but could you? 
 
-[[Continue-&gt;Showtrial]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]
-
-</tw-passagedata><tw-passagedata pid="32" name="Co-worker dissappeared" tags="" position="1229,698.5" size="100,100">You asked your co-worker what he thought and he became more brazen. 
+[[Continue-&gt;Showtrial]]</tw-passagedata><tw-passagedata pid="41" name="Co-worker dissappeared" tags="" position="1229,698.5" size="100,100">You asked your co-worker what he thought and he became more brazen. 
 
 &quot;All these things, is the fault of the Communist Party.&quot; He said. &quot;I think our motherland is not making progress at all and they are feeding us lies about the industralization. Its not working!&quot;
 
 You tried to hold a gasp, knowing that what he saying doing was as good as commiting treason. 
 
-[[You simply kept quiet and continued. --&gt; dissapearance]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="33" name=" dissapearance" tags="" position="1386,780.5" size="100,100">The next day. You realized that your co-worker was no longer in the office.
+[[You simply kept quiet and continued. --&gt; dissapearance]]</tw-passagedata><tw-passagedata pid="42" name=" dissapearance" tags="" position="1386,780.5" size="100,100">The next day. You realized that your co-worker was no longer in the office.
 
 Someone say he fell ill. 
 
 However he was the hostpital&#39;s only specialist in the heart. Without him, many surgeries could not be performed... 
 
 There was nothing much you could do and you kept to yourself. The office was very queit these days. 
-[[Continue-&gt;knocking on the door.]]
-
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="34" name="Showtrial" tags="" position="2067,722.5" size="100,100">(set: $answer to (prompt: &quot;Can you defend yourself in a show trail?&quot;,&quot;Answer&quot;))
+[[Continue-&gt;knocking on the door.]]</tw-passagedata><tw-passagedata pid="43" name="Showtrial" tags="" position="2067,722.5" size="100,100">(set: $answer to (prompt: &quot;Can you defend yourself in a show trail?&quot;,&quot;Answer&quot;))
 
 (if: $answer is &quot;no&quot;)[
 	(go-to: &quot;Death&quot;)
@@ -370,35 +295,27 @@ There was nothing much you could do and you kept to yourself. The office was ver
 (else:)[
 	(go-to:&quot;Try again to continue!&quot;)
 ]
-</tw-passagedata><tw-passagedata pid="35" name="Death" tags="" position="2058,847.5" size="100,100">You were in a show trial.
+</tw-passagedata><tw-passagedata pid="44" name="Death" tags="" position="2058,847.5" size="100,100">You were in a show trial.
 
 Your sentence has already been determined and you cannot defend yourself.
 
 For treason and trying to harm the communist party members, you were sentenced to be shot. 
 
-END.
-
-&lt;img src=&quot;https://media4.giphy.com/media/dkuZHIQsslFfy/200.webp?cid=ecf05e47pymvhlzkmbqj7c4walitwg4d5ql2wzv53n9p6ibs&amp;rid=200.webp&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;game over&quot;&gt;
-
-[[Restart? -&gt;Untitled Passage]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="36" name="Red army 1" tags="" position="472,296.5" size="100,100">You are part of the Red Army, and you were a junior officer who had recently joined the ranks. 
+END.</tw-passagedata><tw-passagedata pid="45" name="Red army 1" tags="" position="540,310.5" size="100,100">You are part of the Red Army, and you were a junior officer who had recently joined the ranks. 
 
 From the death of Lenin, you were aware that the leader of the Red Army had huge changes in leadership. A prominent leader, which you had admired, was removed.
 
-[[What was the name of this Politburo member who was removed?-&gt;The leaders name]]</tw-passagedata><tw-passagedata pid="37" name="The leaders name" tags="" position="420,459.5" size="100,100">(set: $answer to (prompt: &quot;What was the name of this Politburo member who was removed?&quot;,&quot;Answer&quot;))
+[[What was the name of this Politburo member who was removed?-&gt;The leaders name]]</tw-passagedata><tw-passagedata pid="46" name="The leaders name" tags="" position="592,468.5" size="100,100">(set: $answer to (prompt: &quot;What was the name of this Politburo member who was removed?&quot;,&quot;Answer&quot;))
 (set: $correct to &quot;Trotsky&quot;)
 (if: $answer is $correct)[
 	(go-to: &quot;New soldier&quot;)
 ]
 (else:)[
 	(go-to:&quot;Guess it again&quot;)
-]</tw-passagedata><tw-passagedata pid="38" name="Guess it again" tags="" position="323,349" size="100,100">Snap, you got it wrong. 
+]</tw-passagedata><tw-passagedata pid="47" name="Guess it again" tags="" position="377,407" size="100,100">Snap, you got it wrong. 
 Guess the name of the leader again! (refer to your textbook or ask your friends for help!)
 
-Continue[[Continue-&gt;The leaders name]]</tw-passagedata><tw-passagedata pid="39" name="New soldier" tags="" position="551,446" size="100,100">Being new in the army, there was a lot of things for you to learn about. However, you came in during a tense time. 
+Continue[[Continue-&gt;The leaders name]]</tw-passagedata><tw-passagedata pid="48" name="New soldier" tags="" position="708,468" size="100,100">Being new in the army, there was a lot of things for you to learn about. However, you came in during a tense time. 
 
 There were news about how there were people who were threatening Stalin and who are disloyal towards him. 
 
@@ -409,20 +326,20 @@ At your workplace, some of your comrades were whispering.
 Who do you feel your loyalty lies with? 
 [[&quot;Trotsky.&quot; -&gt;Defying Stalin]]
 [[&quot;Stalin.&quot; -&gt;Supporting Stalin]]
-[[&quot;I do not know.&quot; -&gt;staying low ]]</tw-passagedata><tw-passagedata pid="40" name="KIROV2" tags="" position="222,827.3333435058594" size="100,100">(set: $answer to (prompt: &quot;What was the full name of the Secretary who was killed?&quot;,&quot;Answer&quot;))
+[[&quot;I do not know.&quot; -&gt;staying low ]]</tw-passagedata><tw-passagedata pid="49" name="KIROV2" tags="" position="222,827.3333435058594" size="100,100">(set: $answer to (prompt: &quot;What was the full name of the Secretary who was killed?&quot;,&quot;Answer&quot;))
 Your answer is (print: $answer)
 (set: $correct to &quot;Sergei Kirov&quot;)
 (if: $answer is $correct)[
 	(go-to: &quot;Story 2&quot;)
 ]
 (else:)[
-	(go-to:&quot;Try again and restart&quot;)</tw-passagedata><tw-passagedata pid="41" name="Try again and restart" tags="" position="216,512.3333435058594" size="100,100">You got it wrong :C 
+	(go-to:&quot;Try again and restart&quot;)</tw-passagedata><tw-passagedata pid="50" name="Try again and restart" tags="" position="356,520.3333435058594" size="100,100">You got it wrong :C 
 
 Try it again from the start! 
 
-[[Continue-&gt;Red army 1]]</tw-passagedata><tw-passagedata pid="42" name="Guessing Kirov " tags="" position="299,666.3333435058594" size="100,100">Recently the news reported about an assasination of a significant individual on the night of&#39;&#39; 1 December 1934.&#39;&#39; This individual was the Secretary of the Leningrad Party Organization.
+[[Continue-&gt;Red army 1]]</tw-passagedata><tw-passagedata pid="51" name="Guessing Kirov " tags="" position="299,666.3333435058594" size="100,100">Recently the news reported about an assasination of a significant individual on the night of&#39;&#39; 1 December 1934.&#39;&#39; This individual was the Secretary of the Leningrad Party Organization.
 
- [[Can you give the name of this leader? -&gt;KIROV2]] </tw-passagedata><tw-passagedata pid="43" name="Defying Stalin" tags="" position="312,947.3333435058594" size="100,100">You strongly believed that Trotsky was the true leader of the Red Army. 
+ [[Can you give the name of this leader? -&gt;KIROV2]] </tw-passagedata><tw-passagedata pid="52" name="Defying Stalin" tags="" position="871,614" size="100,100">You strongly believed that Trotsky was the true leader of the Red Army. 
 
 Many times, you have spoken out on your beliefs with your fellow comrades about how Trotksy should serve as a leader. 
 
@@ -432,21 +349,21 @@ But as time when on, some of the Red Army officers were visted by the Secret Pol
 
 Would you still stand firm to your stance? 
 [[Yes. I believe in Trotsky.-&gt;Branded as an enemy. ]]
-No. I should save myself.[[No. I should save myself.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="44" name="Supporting Stalin" tags="" position="523,603" size="100,100">You believed very much that Stalin will bring about progress in the Soviet Union. This was what you were being taught since young, &quot;There was no other better and more qualified leader than the man of steel himself!&quot; 
+No. I should save myself.[[No. I should save myself.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="53" name="Supporting Stalin" tags="" position="477,570" size="100,100">You believed very much that Stalin will bring about progress in the Soviet Union. This was what you were being taught since young, &quot;There was no other better and more qualified leader than the man of steel himself!&quot; 
 
 However there were also &quot;threats&quot; to his leadership.
 
-[[Continue.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="45" name="staying low " tags="" position="693,731" size="100,100">You did not feel like either leader was good. 
+[[Continue.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="54" name="staying low " tags="" position="693,731" size="100,100">You did not feel like either leader was good. 
 However, you wanted to remain as a Red Army Soldier, and you noticed that these soldiers had very different alliegiences. 
 
-Continue.[[Continue.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="46" name="Finding the people who betray" tags="" position="446,735" size="100,100">When you were on duty, you overheard a conversation between two of the soldiers. 
+Continue.[[Continue.-&gt;Finding the people who betray]]</tw-passagedata><tw-passagedata pid="55" name="Finding the people who betray" tags="" position="446,735" size="100,100">When you were on duty, you overheard a conversation between two of the soldiers. 
 &quot;I would not want to serve Stalin, Trotsky should be the rightful person to lead the Red Army.&quot;
 &quot;That is right, he was the one who led toe Bolsheviks to victory.&quot; 
 
 You realized that these people were not loyal to Stalin. 
 What will you do? 
 [[&quot;Tell on them to the Secret Police&quot; -&gt;Promotion]]
-[[&quot;Stay quiet and not invovle yourself.&quot;-&gt;Purging ]]</tw-passagedata><tw-passagedata pid="47" name="Promotion" tags="" position="458,880" size="100,100">You gave the names of these soldiers to the Secret Police. 
+[[&quot;Stay quiet and not invovle yourself.&quot;-&gt;Purging ]]</tw-passagedata><tw-passagedata pid="56" name="Promotion" tags="" position="458,880" size="100,100">You gave the names of these soldiers to the Secret Police. 
 
 It turn out that these officers were senior members of the Red Army. They were branded as traitors of the state and removed from their post. 
 
@@ -454,20 +371,20 @@ Because you proved yourself loyal to Stalin, you got promoted to serve under him
 
 Life went on for you.
 
-CONGRATULATIONS. YOU SURVIVE. </tw-passagedata><tw-passagedata pid="48" name="Purging " tags="" position="591,827" size="100,100">You had chosen to save your comrades. 
+CONGRATULATIONS. YOU SURVIVE. </tw-passagedata><tw-passagedata pid="57" name="Purging " tags="" position="591,827" size="100,100">You had chosen to save your comrades. 
 
 However, one day the Secret Police came to you. 
 
 &quot;Comrade, there are some allegations that some members are not loyal to our leader Stalin.&quot; They said. &quot;Do you happen to know any of them?&quot; 
 
 [[Deny. -&gt;Purged.]]
-Mention some names. </tw-passagedata><tw-passagedata pid="49" name="Branded as an enemy. " tags="" position="829,762" size="100,100">You were subsequently brought in by the Secret Police.
+Mention some names. </tw-passagedata><tw-passagedata pid="58" name="Branded as an enemy. " tags="" position="829,762" size="100,100">You were subsequently brought in by the Secret Police.
 
 Someone had given your name to them, and accused you of being disloyal to Stalin. 
 
 You accept your fate and sentence of treason, as you know deep within your heart you would not serve a leader like Stalin. 
 
-END. </tw-passagedata><tw-passagedata pid="50" name="Purged." tags="" position="808,913" size="100,100">You denied having any knowledge about it. 
+END. </tw-passagedata><tw-passagedata pid="59" name="Purged." tags="" position="808,913" size="100,100">You denied having any knowledge about it. 
 
 Two days later, the same Secret Police members came for you. 
 
@@ -477,56 +394,7 @@ You were in disbelief, however could do nothing to prove yourself otherwise.
 
 You were removed and sent to the Gulags.
 
-END.</tw-passagedata><tw-passagedata pid="51" name="Secret Police" tags="" position="1174,134.5" size="100,100">(set: $answer to (prompt: &quot;What is the name of this group of people who arrest others?&quot;,&quot;Answer&quot;))
-Your answer is (print: $answer)
-(set: $correct to &quot;secret police&quot;)
-(if: $answer is $correct)[
-	(go-to: &quot;Working on the machinery&quot;)
-]
-(else:)[
-	(go-to:&quot;Incorrect answer restart &quot;)
-	
-	</tw-passagedata><tw-passagedata pid="52" name="To escape or not escape. " tags="" position="1521,280.5" size="100,100">(set: $answer to (prompt: &quot;If I got caught, I would lose my ____.&quot;,&quot;Answer&quot;))
-Your answer is (print: $answer)
-(set: $correct to &quot;life&quot;)
-(if: $answer is $correct)[
-	(go-to: &quot;To escape or not escape 2&quot;)
-]
-(else:)[
-	(go-to:&quot;Incorrect answer restart 2&quot;)
-]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="53" name="Incorrect answer restart 2" tags="" position="1333,253.5" size="100,100">Oh no, lets try that again. 
-
-Continue.[[Continue.-&gt;Defiance]]</tw-passagedata><tw-passagedata pid="54" name="To escape or not escape 2" tags="" position="1650,295.5" size="100,100">Do you decide to continue with these meetings? 
-[[Yes, I will not suffer in silence. -&gt;A knock on the door.]]
-[[No, it is too dangerous. -&gt;Another knock on the door]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata><tw-passagedata pid="55" name="A knock on the door." tags="" position="1633,143.5" size="100,100">One night there was a knock on your door on one  of your meetings. 
-
-You and your friends scurried, &quot;It is them! Some of them whispered.&quot; 
-
-Continue. [[Continue. -&gt;Questioning]]</tw-passagedata><tw-passagedata pid="56" name="Friend dies in work" tags="" position="1291,9.5" size="100,100">Work was very dangerous. You friend fell from a height and died the last day, yet your superior did not bat an eye towards the death. 
-
-As months flew by, you were task with even more work, and even harsher conditions.
-
-[[&quot;This is not fair, we need better treatment&quot; -&gt;Defiance]]
-
-[[&quot;Let&#39;s just endure this and live through it...&quot; -&gt;Continuing the hardship]]</tw-passagedata><tw-passagedata pid="57" name="Another knock on the door" tags="" position="1722,421.5" size="100,100">One night, there was a knock on the door.
-
-&lt;img src=&quot;https://images.says.com/uploads/story_source/source_image/532105/ad1d.jpg&quot; width=&quot;500&quot; height=&quot;300&quot; alt=&quot;door knock&quot;&gt;
-
-You opened it. 
-
-[[Continue.-&gt;betrayal?]]
-
-(text-colour:black)[tw-sidebar {
-    display: none;
-}]</tw-passagedata></tw-storydata>
+END.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
